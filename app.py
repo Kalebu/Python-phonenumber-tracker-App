@@ -10,7 +10,7 @@ class Location_Tracker:
         self.window.title("Phone number Tracker")
         self.window.geometry("500x400")
         self.window.configure(bg="#3f5efb")
-        self.window.resizable(True, True)
+        self.window.resizable(False, False)
 
         #___________Application menu_____________
         Label(App, text="Enter a phone number",fg="white", font=("Times", 20), bg="#3f5efb").place(x=150,y= 30)
