@@ -34,7 +34,10 @@ class Location_Tracker:
             tracked = pycountry.countries.get(alpha_2=phone_country(phone_number))
             print(tracked)
             if tracked:
-                country = tracked.official_name
+                    if hasattr(tracked, "official_name"):
+                        country = tracked.official_name
+                    else:
+                        country = tracked.name
         self.country_label.configure(text=country)
 
 
